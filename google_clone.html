@@ -11,6 +11,7 @@
                 font-size: 14px;
                 font-family: arial, sans-serif;
                 color: #222;
+                height: 100%;
             }
            .flex-container {
                display: flex;
@@ -53,17 +54,25 @@
            .top-right-header-button {
                padding-left: 15px;
                line-height: normal;
+               min-width: auto;
            }
            .google-apps-button {
-               color: #000;
+               color: #5f6368;
                cursor: pointer;
-               opacity: 1;
-               
                display: inline-block;
                vertical-align: middle;
                box-sizing: border-box;
-               height: 40px;
-               width: 40px;
+               height: 30px;
+               width: 30px;
+               padding-left: 4px;
+               padding-right: 4px;
+               padding-top: 4px;
+           }
+           .google-apps-button:hover {
+               opacity: 1;
+               border-radius: 20%;
+               border-color: #5f6368;
+               fill: currentColor;
            }
            .sign-in-button {
                background: #2b7de9;
@@ -85,6 +94,30 @@
                box-sizing: border-box;
 
            }
+           .google-logo {
+               display: flex;
+               height: 25%;
+               width: 25%;
+               position: relative;
+               margin: 0 auto;
+           }
+           .flex-search-box {
+               width: auto;
+               max-width: 584px;
+               position: relative;
+               margin: 0 auto;
+               padding-top: 6px;
+           }
+           .search-bar {
+               vertical-align: middle;
+               align-items: center;
+               flex: 1;
+               display: flex;
+               padding: 5px 8px 0 16px;
+               padding-left: 14px;
+               width: auto;
+               background: #fff;
+               border: 1px solid #dfe1e5;
            
         </style>
         <div class="header-row base">
@@ -94,13 +127,18 @@
                 <a class="header-row-2">Gmail</a>
                 <a class="header-row-2">Images</a>
                 <a class="google-apps-button" role="button">
-                    <svg> content="Google Apps"</svg>
                     <img src="apps-grid.svg">
                 </a>
                 <a class="sign-in-button">Sign in</a>
             </div>
-            <div class="search-bar">
+        </div>
+            <div>
+                <img class="google-logo" src="Google_logo.png">
+            </div>
+            <div class="flex-search-box">
+                <div class="search-bar">
                 <input type="text" placeholder="Search...">
+                </div>
             </div>
             <center>
                 <div class="search-button">
@@ -117,7 +155,7 @@
                 <a>Terms</a>
                 <a>Settings</a>
             </div>
-        </div>
+        
 
         
     </body>

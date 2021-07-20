@@ -118,7 +118,68 @@
                width: auto;
                background: #fff;
                border: 1px solid #dfe1e5;
-           
+               box-shadow: none;
+               border-radius: 24px;
+               height: 44px;
+               margin: 0 auto;
+           }
+           .search-bar:hover {
+               background-color: #fff;
+               box-shadow: 0 1px 6px rgba(32,33,36,.28);
+               border-color: rgba(223,225,229,0);
+           }
+           .search-bar-text {
+               background-color: transparent;
+               border: none;
+               margin: 0;
+               padding: 0;
+               outline: none;
+               flex: 100%;
+
+           }
+           .search-button {
+               height: 36px;
+               padding-top: 18px;
+               border-radius: 4px;
+               font-family: arial, sans-serif;
+               font-size: 14px;
+               margin: 11px 4px;
+               padding: 0 16px;
+               line-height: 27px;
+               min-width: 54px;
+               text-align: center;
+               cursor: pointer;
+               user-select: none;
+               background-color: f8f9fa;
+           }
+           .search-button:hover {
+               box-shadow: 0 1px 1px rgba(0,0,0,.1);
+               background-color: #f8f9fa;
+               border: 1px solid #dadce0;
+               color: #202124;
+           }
+           .search-button-under-separation {
+               flex-grow: 1;
+               flex-shrink: 0;
+               box-sizing: border-box;
+           }
+           .footer-item {
+               background: #f2f2f2;
+               box-sizing: border-box;
+               justify-content: space-evenly;
+               display: flex;
+               flex-wrap: wrap;
+               padding: 0 20px;
+               font-size: 14px;
+               font-family: arial, sans-serif;
+               color: #222;
+           }
+           .carbon-text {
+               color: #70757a;
+               display: block;
+               padding: 15px;
+               white-space: nowrap;
+           }
         </style>
         <div class="header-row base">
             <a class="top-left-header-button-first-of-type top-left-header-button">About</a>
@@ -137,17 +198,16 @@
             </div>
             <div class="flex-search-box">
                 <div class="search-bar">
-                <input type="text" placeholder="Search...">
+                <input class="search-bar-text" type="text" placeholder="Search...">
                 </div>
             </div>
             <center>
-                <div class="search-button">
-                    Google Search
-                </div>
-                <div class="search-button">I'm Feeling Lucky</div>
+                <input class="search-button" value="Google Search" aria-label="Google Search" type="submit">
+                <input class="search-button" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit">
             </center>
+            <div class="search-button-under-separation"></div>
             <div class="footer-item">
-                <a>Carbon neutral since 2007</a>
+                <a class="carbon-text">Carbon neutral since 2007</a>
                 <a>Advertising</a>
                 <a>Business</a>
                 <a>How Search works</a>
